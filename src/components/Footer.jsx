@@ -98,9 +98,10 @@ export default function Footer({ showBackToTop }) {
               type="button"
               onClick={scrollToTop}
               aria-label="Back to top"
-              className="group pointer-events-auto w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center bg-[#252525] hover:bg-[#323232] active:bg-[#3c3c3c] text-[#C5C5C5] hover:text-white border border-white/10 hover:border-white/25 shadow-sm transition-all duration-200 ease-out cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#1E1E1E]"
+              className="group pointer-events-auto inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full bg-[#252525] hover:bg-[#2d2d2d] active:bg-[#353535] text-[#A8A8A8] hover:text-white border border-white/10 hover:border-white/25 shadow-sm text-xs sm:text-[13px] font-medium tracking-normal transition-all duration-200 ease-out cursor-pointer hover:-translate-y-0.5 motion-reduce:hover:translate-y-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#1E1E1E]"
             >
-              <ArrowUp className="w-4 h-4 sm:w-4.5 sm:h-4.5 stroke-[2] transition-transform duration-200 group-hover:-translate-y-0.5 motion-reduce:group-hover:translate-y-0" />
+              <span>Back to top</span>
+              <ArrowUp className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2] transition-transform duration-200 group-hover:-translate-y-0.5 motion-reduce:group-hover:translate-y-0" />
             </button>
           </div>
         </div>
