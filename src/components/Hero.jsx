@@ -1,6 +1,27 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+
+// Keep track so entrance animation runs only once per session
+let hasHeroAnimatedSession = false
 
 export default function Hero() {
+  const [shouldAnimate, setShouldAnimate] = useState(() => !hasHeroAnimatedSession)
+
+  useEffect(() => {
+    if (hasHeroAnimatedSession) return
+
+    // Respect prefers-reduced-motion
+    if (typeof window !== 'undefined') {
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      if (prefersReduced) {
+        hasHeroAnimatedSession = true
+        setShouldAnimate(false)
+        return
+      }
+    }
+
+    hasHeroAnimatedSession = true
+  }, [])
+
   return (
     <section className="w-full bg-[#1E1E1E] text-white pt-10 sm:pt-14 md:pt-16 pb-20 md:pb-28">
       <div className="max-w-[1120px] mx-auto px-4 sm:px-8 lg:px-12">
@@ -20,7 +41,10 @@ export default function Hero() {
           
           {/* Column 1: Far-left Wing (Teaching kids) */}
           <div className="w-[15%] sm:w-[15.5%] flex-shrink-0 self-center">
-            <div className="aspect-square w-full overflow-hidden rounded-xl sm:rounded-2xl">
+            <div
+              className={`aspect-square w-full overflow-hidden rounded-xl sm:rounded-2xl ${shouldAnimate ? 'hero-photo-stagger' : ''}`}
+              style={shouldAnimate ? { animationDelay: '60ms' } : undefined}
+            >
               <img
                 src="/images/hero/portfolio_image1.png"
                 alt="Community and teaching"
@@ -32,7 +56,10 @@ export default function Hero() {
           {/* Column 2: Left Mid Stack (Childhood 2005 & Painting Moon) */}
           <div className="w-[18%] sm:w-[18.5%] flex-shrink-0 flex flex-col gap-2 sm:gap-2.5 md:gap-3 self-center">
             {/* Top: 2005 Childhood Painting */}
-            <div className="aspect-[4/3.4] w-full overflow-hidden rounded-xl sm:rounded-2xl">
+            <div
+              className={`aspect-[4/3.4] w-full overflow-hidden rounded-xl sm:rounded-2xl ${shouldAnimate ? 'hero-photo-stagger' : ''}`}
+              style={shouldAnimate ? { animationDelay: '180ms' } : undefined}
+            >
               <img
                 src="/images/hero/portfolio_image2.png"
                 alt="Childhood painting"
@@ -40,7 +67,10 @@ export default function Hero() {
               />
             </div>
             {/* Bottom: Moon Canvas Painting */}
-            <div className="aspect-[4/3.7] w-full overflow-hidden rounded-xl sm:rounded-2xl">
+            <div
+              className={`aspect-[4/3.7] w-full overflow-hidden rounded-xl sm:rounded-2xl ${shouldAnimate ? 'hero-photo-stagger' : ''}`}
+              style={shouldAnimate ? { animationDelay: '300ms' } : undefined}
+            >
               <img
                 src="/images/hero/portfolio_image3.png"
                 alt="Moon painting on canvas"
@@ -51,7 +81,10 @@ export default function Hero() {
 
           {/* Column 3: Center Dominant Hero Portrait (Aditi at the beach) */}
           <div className="w-[30%] sm:w-[31%] flex-shrink-0 self-center">
-            <div className="aspect-[10/16] w-full overflow-hidden rounded-xl sm:rounded-2xl">
+            <div
+              className={`aspect-[10/16] w-full overflow-hidden rounded-xl sm:rounded-2xl ${shouldAnimate ? 'hero-photo-stagger' : ''}`}
+              style={shouldAnimate ? { animationDelay: '820ms' } : undefined}
+            >
               <img
                 src="/images/hero/portfolio_image4.png"
                 alt="Aditi Chaware"
@@ -63,7 +96,10 @@ export default function Hero() {
           {/* Column 4: Right Mid Stack (Dance & Library Bookshelf) */}
           <div className="w-[18%] sm:w-[18.5%] flex-shrink-0 flex flex-col gap-2 sm:gap-2.5 md:gap-3 self-center">
             {/* Top: Traditional Dance */}
-            <div className="aspect-[4/3.4] w-full overflow-hidden rounded-xl sm:rounded-2xl">
+            <div
+              className={`aspect-[4/3.4] w-full overflow-hidden rounded-xl sm:rounded-2xl ${shouldAnimate ? 'hero-photo-stagger' : ''}`}
+              style={shouldAnimate ? { animationDelay: '420ms' } : undefined}
+            >
               <img
                 src="/images/hero/portfolio_image5.png"
                 alt="Dance performance"
@@ -71,7 +107,10 @@ export default function Hero() {
               />
             </div>
             {/* Bottom: Library Research */}
-            <div className="aspect-[4/3.8] w-full overflow-hidden rounded-xl sm:rounded-2xl">
+            <div
+              className={`aspect-[4/3.8] w-full overflow-hidden rounded-xl sm:rounded-2xl ${shouldAnimate ? 'hero-photo-stagger' : ''}`}
+              style={shouldAnimate ? { animationDelay: '540ms' } : undefined}
+            >
               <img
                 src="/images/hero/portfolio_image6.png"
                 alt="Research in library"
@@ -82,7 +121,10 @@ export default function Hero() {
 
           {/* Column 5: Far-right Wing (Camera photography) */}
           <div className="w-[15%] sm:w-[15.5%] flex-shrink-0 self-center">
-            <div className="aspect-square w-full overflow-hidden rounded-xl sm:rounded-2xl">
+            <div
+              className={`aspect-square w-full overflow-hidden rounded-xl sm:rounded-2xl ${shouldAnimate ? 'hero-photo-stagger' : ''}`}
+              style={shouldAnimate ? { animationDelay: '660ms' } : undefined}
+            >
               <img
                 src="/images/hero/portfolio_image7.png"
                 alt="Observing through camera"
