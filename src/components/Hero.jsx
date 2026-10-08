@@ -191,7 +191,7 @@ export default function Hero() {
               {/* Layer 3: Foreground Expressive Doodles & Annotation */}
               <div className="hero-doodle-overlay absolute inset-0 pointer-events-none z-20 overflow-visible">
                 {/* Handwritten Annotation + Large Curving Arrow Pointing to Subject */}
-                <div className="hero-doodle-text absolute -top-12 -left-6 sm:-top-16 sm:-left-10 md:-top-20 md:-left-14 flex flex-col items-start select-none z-30">
+                <div className="hero-doodle-text absolute top-2 left-2 sm:top-3 sm:left-3 md:top-4 md:left-4 flex flex-col items-start select-none z-30">
                   <span className="font-handwriting italic text-[#FFF8E7] text-2xl sm:text-3xl md:text-4xl lg:text-[42px] whitespace-nowrap drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)] -rotate-4">
                     always curious
                   </span>
@@ -203,7 +203,7 @@ export default function Hero() {
                 </div>
 
                 {/* Oversized Soft Peach Sparkle Star */}
-                <svg className="absolute -top-10 -right-8 sm:-top-14 sm:-right-12 md:-top-16 md:-right-16 w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 text-[#FED7AA] rotate-15 drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]" viewBox="0 0 40 40" fill="none">
+                <svg className="absolute -top-6 -right-6 sm:-top-8 sm:-right-8 md:-top-10 md:-right-10 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 text-[#FED7AA] rotate-15 drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]" viewBox="0 0 40 40" fill="none">
                   <path d="M20 2 Q 20 20 2 20 Q 20 20 20 38 Q 20 20 38 20 Q 20 20 20 2 Z" fill="currentColor" />
                 </svg>
                 {/* Large Pastel Pink Hand-Drawn Heart */}
@@ -259,13 +259,6 @@ export default function Hero() {
               className={`relative hero-photo-wrapper ${shouldAnimate ? 'hero-photo-stagger' : ''}`}
               style={shouldAnimate ? { animationDelay: '540ms' } : undefined}
             >
-              {/* Layer 1: Background Cream Highlighter Stroke */}
-              <div className="hero-doodle-overlay absolute inset-0 pointer-events-none z-0 overflow-visible">
-                <svg className="absolute -bottom-8 -right-6 sm:-bottom-10 sm:-right-8 w-32 sm:w-44 h-12 text-[#FFFBEB] opacity-80" viewBox="0 0 140 40" fill="none">
-                  <path d="M5 22 Q 40 8 75 24 T 135 18" stroke="currentColor" strokeWidth="8" strokeLinecap="round" />
-                </svg>
-              </div>
-
               {/* Layer 2: Tilted Photo */}
               <div className="relative z-10 aspect-[4/3.8] w-full overflow-hidden rounded-xl sm:rounded-2xl hero-photo-tilt hero-photo-tilt-6 shadow-md sm:shadow-lg">
                 <img
