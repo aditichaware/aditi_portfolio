@@ -1,9 +1,26 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom'
+import { ArrowUp } from 'lucide-react'
 import ScrollReveal from './ScrollReveal.jsx'
 
-export default function Footer() {
+export default function Footer({ showBackToTop }) {
+  const location = useLocation()
+  const isHomePage = showBackToTop ?? (location.pathname === '/' || location.pathname === '')
+
+  const scrollToTop = () => {
+    const prefersReducedMotion =
+      typeof window !== 'undefined' &&
+      window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+    window.scrollTo({
+      top: 0,
+      behavior: prefersReducedMotion ? 'auto' : 'smooth',
+    })
+  }
+
   return (
-    <footer id="contact" className="w-full bg-[#1E1E1E] text-[#C5C5C5] pt-24 sm:pt-32 md:pt-40 pb-24 sm:pb-32 md:pb-40">
+    <footer id="contact" className="relative w-full bg-[#1E1E1E] text-[#C5C5C5] pt-24 sm:pt-32 md:pt-40 pb-24 sm:pb-32 md:pb-40">
       <ScrollReveal className="max-w-[1120px] mx-auto px-6 sm:px-10 lg:px-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-12 md:gap-16">
         
         {/* Left: LET'S CONNECT (Massive Bold Typography) */}
@@ -72,6 +89,22 @@ export default function Footer() {
         </div>
 
       </ScrollReveal>
+
+      {/* Back to Top button in Contact section */}
+      {isHomePage && (
+        <div className="absolute bottom-8 sm:bottom-10 md:bottom-12 left-0 right-0 pointer-events-none">
+          <div className="max-w-[1120px] mx-auto px-6 sm:px-10 lg:px-16 flex justify-end">
+            <button
+              type="button"
+              onClick={scrollToTop}
+              aria-label="Back to top"
+              className="group pointer-events-auto w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center bg-[#252525] hover:bg-[#323232] active:bg-[#3c3c3c] text-[#C5C5C5] hover:text-white border border-white/10 hover:border-white/25 shadow-sm transition-all duration-200 ease-out cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#1E1E1E]"
+            >
+              <ArrowUp className="w-4 h-4 sm:w-4.5 sm:h-4.5 stroke-[2] transition-transform duration-200 group-hover:-translate-y-0.5 motion-reduce:group-hover:translate-y-0" />
+            </button>
+          </div>
+        </div>
+      )}
     </footer>
   )
 }
