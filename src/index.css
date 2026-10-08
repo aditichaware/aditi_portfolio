@@ -37,25 +37,27 @@
   font-family: 'Caveat', cursive;
 }
 
-/* Infinite Marquee Carousel */
-@keyframes marquee {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-marquee {
+/* Extra Works Draggable Infinite Carousel */
+.carousel-track {
   display: flex;
   width: max-content;
-  animation: marquee 35s linear infinite;
   will-change: transform;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
-.animate-marquee:hover {
-  animation-play-state: paused !important;
+.carousel-draggable-container {
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+body.is-carousel-dragging,
+body.is-carousel-dragging * {
+  cursor: grabbing !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
 }
 
 /* Subtle Global Scroll Reveal Language */

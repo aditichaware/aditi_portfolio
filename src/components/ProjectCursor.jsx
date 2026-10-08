@@ -57,7 +57,7 @@ export default function ProjectCursor({
 
     // Toggle visibility only when crossing boundaries into/out of a project card
     const checkHover = (target) => {
-      if (!target) {
+      if (!target || document.body.classList.contains('is-carousel-dragging')) {
         if (isVisibleRef.current) setIsVisible(false)
         return
       }
@@ -75,6 +75,15 @@ export default function ProjectCursor({
       checkHover(e.target)
     }
 
+    const handlePointerUp = (e) => {
+      setTimeout(() => {
+        if (lastX >= 0 && lastY >= 0) {
+          const el = document.elementFromPoint(lastX, lastY)
+          checkHover(el)
+        }
+      }, 30)
+    }
+
     const handleScroll = () => {
       if (lastX >= 0 && lastY >= 0) {
         const el = document.elementFromPoint(lastX, lastY)
@@ -89,11 +98,13 @@ export default function ProjectCursor({
     }
 
     window.addEventListener('pointermove', handlePointerMove, { passive: true })
+    window.addEventListener('pointerup', handlePointerUp, { passive: true })
     window.addEventListener('scroll', handleScroll, { passive: true })
     document.addEventListener('mouseleave', handleMouseLeave)
 
     return () => {
       window.removeEventListener('pointermove', handlePointerMove)
+      window.removeEventListener('pointerup', handlePointerUp)
       window.removeEventListener('scroll', handleScroll)
       document.removeEventListener('mouseleave', handleMouseLeave)
     }
