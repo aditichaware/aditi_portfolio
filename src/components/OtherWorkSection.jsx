@@ -5,26 +5,31 @@ export default function OtherWorkSection() {
   const projects = [
     {
       title: 'Understanding Emotional Connection to AI Chatbots',
+      caption: 'ChatGPT — Understanding emotional connection with AI',
       imageSrc: '/images/other_work/portfolio_extra1.png',
       link: 'https://drive.google.com/file/d/1aTBdkdGDK4nvsTl1PMGnRa8N7yeqqKPr/view?usp=sharing',
     },
     {
       title: 'Samsung Hackathon 2025 - HEY EVA!',
+      caption: 'Eva — Exploring agentic AI through an AI companion',
       imageSrc: '/images/other_work/portfolio_extra2.png',
       link: 'https://www.behance.net/gallery/244027267/Eva-Agentic-AI-Companion-Design-%28Samsung-Hackathon%29',
     },
     {
       title: 'IPL Infographics & Tournament Analytics',
+      caption: 'IPL — Making IPL statistics visual and interactive',
       imageSrc: '/images/other_work/portfolio_extra3.png',
       link: 'https://www.behance.net/gallery/231655563/Information-Visualization-Indian-premiere-league',
     },
     {
       title: 'Krea: Kriya + Creativity',
+      caption: 'Krea — Reimagining productivity with agentic AI',
       imageSrc: '/images/other_work/portfolio_extra4.png',
       link: 'https://www.figma.com/proto/JefcoB85cnDyb9UzzptgDc/krea?node-id=1-71&viewport=332%2C-21%2C0.02&t=6EAV5fBcsB9buLfU-1&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1',
     },
     {
       title: 'PulseBlend: Music & Colours',
+      caption: 'PulseBlend — Exploring interaction beyond the screen',
       imageSrc: '/images/other_work/portfolio_extra5.png',
       link: 'https://www.figma.com/proto/Wm6pjwfjOd9u5CyNV7H5dp/tangible-design?node-id=1-13&viewport=149%2C53%2C0.11&t=1OZdl3D93Ct3qeoe-1&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1',
     },
@@ -250,7 +255,7 @@ export default function OtherWorkSection() {
                 {/* Single-line Editorial Caption */}
                 <div className="mt-2.5 sm:mt-3 px-1 text-left">
                   <p className="text-[13px] sm:text-[14px] md:text-[15px] font-medium text-[#222222] tracking-tight truncate whitespace-nowrap overflow-hidden text-ellipsis transition-colors group-hover:text-black">
-                    {item.title}
+                    {item.caption}
                   </p>
                 </div>
               </a>
