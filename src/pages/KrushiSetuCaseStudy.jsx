@@ -21,7 +21,7 @@ export default function KrushiSetuCaseStudy() {
   // Active section tracking with scroll position
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + 250
+      const scrollPosition = window.scrollY + 200
       const sectionElements = SECTIONS.map((s) => document.getElementById(s.id))
 
       for (let i = sectionElements.length - 1; i >= 0; i--) {
@@ -41,9 +41,9 @@ export default function KrushiSetuCaseStudy() {
   const scrollToSection = (id) => {
     const element = document.getElementById(id)
     if (element) {
-      const yOffset = -50
+      const yOffset = -55
       const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset
-      window.scrollTo({ top: y, behavior: 'smooth' })
+      window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' })
     }
   }
 
@@ -146,7 +146,7 @@ export default function KrushiSetuCaseStudy() {
               </ScrollReveal>
             </section>
 
-            {/* 3. PROCESS (krushisetu3.png to krushisetu7.png) */}
+            {/* 3. PROCESS (krushisetu3.png, krushisetu4.png, krushisetu5.png) */}
             <section id="process" className="scroll-mt-16">
               <ScrollReveal>
                 <img
@@ -175,10 +175,14 @@ export default function KrushiSetuCaseStudy() {
                   decoding="async"
                 />
               </ScrollReveal>
+            </section>
+
+            {/* 4. SOLUTION (krushisetu6.png, krushisetu7.png, krushisetu8.png) */}
+            <section id="solution" className="scroll-mt-16">
               <ScrollReveal>
                 <img
                   src="/images/work/krushisetu/krushisetu6.png"
-                  alt="Visualisation Layer - Principles, Wireframes, Semantic Grid, Archetypes, and Design System"
+                  alt="The Outcome - Core Interface Screens: Home, Chat, Orders, Delivery, Review, Tracking"
                   className="w-full h-auto block select-none"
                   loading="lazy"
                   decoding="async"
@@ -193,14 +197,10 @@ export default function KrushiSetuCaseStudy() {
                   decoding="async"
                 />
               </ScrollReveal>
-            </section>
-
-            {/* 4. SOLUTION (krushisetu8.png) */}
-            <section id="solution" className="scroll-mt-16">
               <ScrollReveal>
                 <img
                   src="/images/work/krushisetu/krushisetu8.png"
-                  alt="The Outcome - Core Interface Screens: Home, Chat, Orders, Delivery, Review, Tracking, and Feedback"
+                  alt="Distributor Feedback, Future Gaps, and Credits"
                   className="w-full h-auto block select-none"
                   loading="lazy"
                   decoding="async"
