@@ -119,7 +119,7 @@ export default function NexusCaseStudy() {
 
           {/* Case Study PNG Content (Dominant element, unconstrained width, high fidelity) */}
           <main className="flex-1 min-w-0">
-            {/* 1. OVERVIEW (nexus1, nexus2, nexus3, nexus4) */}
+            {/* 1. OVERVIEW (nexus1, nexus2, nexus3, nexus4, nexus5) */}
             <section id="overview" className="scroll-mt-16">
               <ScrollReveal>
                 <img
@@ -142,7 +142,7 @@ export default function NexusCaseStudy() {
               <ScrollReveal>
                 <img
                   src="/images/work/nexus/nexus3.png"
-                  alt="What is Nexus Platform & Project Timeline"
+                  alt="Nexus 8-Week Journey Timeline"
                   className="w-full h-auto block select-none"
                   loading="lazy"
                   decoding="async"
@@ -151,29 +151,16 @@ export default function NexusCaseStudy() {
               <ScrollReveal>
                 <img
                   src="/images/work/nexus/nexus4.png"
-                  alt="Product Admin Ecosystem & Features Management"
+                  alt="What is Nexus Platform? Developer and Admin Ecosystem"
                   className="w-full h-auto block select-none"
                   loading="lazy"
                   decoding="async"
                 />
               </ScrollReveal>
-            </section>
-
-            {/* 2. PROBLEM (nexus5, nexus6) */}
-            <section id="problem" className="scroll-mt-16">
               <ScrollReveal>
                 <img
                   src="/images/work/nexus/nexus5.png"
-                  alt="Problem Statement & User Flows"
-                  className="w-full h-auto block select-none"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </ScrollReveal>
-              <ScrollReveal>
-                <img
-                  src="/images/work/nexus/nexus6.png"
-                  alt="User Personas & Operational Roles"
+                  alt="Product Admin Overview - Centralized Management Experience"
                   className="w-full h-auto block select-none"
                   loading="lazy"
                   decoding="async"
@@ -181,12 +168,12 @@ export default function NexusCaseStudy() {
               </ScrollReveal>
             </section>
 
-            {/* 3. SOLUTION (nexus7, nexus8) */}
-            <section id="solution" className="scroll-mt-16">
+            {/* 2. PROBLEM (nexus7, nexus8, nexus9) */}
+            <section id="problem" className="scroll-mt-16">
               <ScrollReveal>
                 <img
                   src="/images/work/nexus/nexus7.png"
-                  alt="The Solution - Create & Manage Functions and Stepper Iterations"
+                  alt="The Starting Point - Jira Ticket Analysis and Initial Scenarios"
                   className="w-full h-auto block select-none"
                   loading="lazy"
                   decoding="async"
@@ -195,7 +182,16 @@ export default function NexusCaseStudy() {
               <ScrollReveal>
                 <img
                   src="/images/work/nexus/nexus8.png"
-                  alt="The Feature Onboarding Flow - High Fidelity UI Design"
+                  alt="What was the problem? - Identification of Self-Serve Bottlenecks"
+                  className="w-full h-auto block select-none"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </ScrollReveal>
+              <ScrollReveal>
+                <img
+                  src="/images/work/nexus/nexus9.png"
+                  alt="Stakeholder Requirements - Perspectives from Product Owners, Developers, and UX"
                   className="w-full h-auto block select-none"
                   loading="lazy"
                   decoding="async"
@@ -203,12 +199,12 @@ export default function NexusCaseStudy() {
               </ScrollReveal>
             </section>
 
-            {/* 4. LEARNINGS (nexus9, nexus10) */}
-            <section id="learnings" className="scroll-mt-16">
+            {/* 3. SOLUTION (nexus10, nexus11, nexus12, nexus13, nexus14) */}
+            <section id="solution" className="scroll-mt-16">
               <ScrollReveal>
                 <img
-                  src="/images/work/nexus/nexus9.png"
-                  alt="Key Learnings - Industry and UX Takeaways"
+                  src="/images/work/nexus/nexus10.png"
+                  alt="The Solution - Streamlined Self-Serve Feature Management"
                   className="w-full h-auto block select-none"
                   loading="lazy"
                   decoding="async"
@@ -216,8 +212,57 @@ export default function NexusCaseStudy() {
               </ScrollReveal>
               <ScrollReveal>
                 <img
-                  src="/images/work/nexus/nexus10.png"
-                  alt="Thank You"
+                  src="/images/work/nexus/nexus11.png"
+                  alt="Wireframes and Initial Design Explorations"
+                  className="w-full h-auto block select-none"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </ScrollReveal>
+              <ScrollReveal>
+                <img
+                  src="/images/work/nexus/nexus12.png"
+                  alt="Our Approach - User Flow for Feature Creation and Management"
+                  className="w-full h-auto block select-none"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </ScrollReveal>
+              <ScrollReveal>
+                <img
+                  src="/images/work/nexus/nexus13.png"
+                  alt="Design Iterations and Multi-Step Stepper Decisions"
+                  className="w-full h-auto block select-none"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </ScrollReveal>
+              <ScrollReveal>
+                <img
+                  src="/images/work/nexus/nexus14.png"
+                  alt="The Feature Onboarding Flow - Step-by-Step Walkthrough"
+                  className="w-full h-auto block select-none"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </ScrollReveal>
+            </section>
+
+            {/* 4. LEARNINGS (nexus15, nexus16) */}
+            <section id="learnings" className="scroll-mt-16">
+              <ScrollReveal>
+                <img
+                  src="/images/work/nexus/nexus15.png"
+                  alt="Key Learnings - Cross-Functional Alignment and Enterprise UX Insights"
+                  className="w-full h-auto block select-none"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </ScrollReveal>
+              <ScrollReveal>
+                <img
+                  src="/images/work/nexus/nexus16.png"
+                  alt="Nexus Case Study Conclusion - Thank You"
                   className="w-full h-auto block select-none"
                   loading="lazy"
                   decoding="async"
