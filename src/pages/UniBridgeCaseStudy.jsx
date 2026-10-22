@@ -78,7 +78,7 @@ export default function UniBridgeCaseStudy() {
           {/* Desktop Sticky Rail (Narrow 115px, no borders/dividers, blends into bg) */}
           <aside className="hidden lg:block w-[115px] shrink-0 sticky top-24 self-start pt-1">
             <Link
-              to="/"
+              to="/#work"
               className="inline-flex items-center gap-1.5 text-[10px] tracking-[0.16em] uppercase text-[#6B6B6B] hover:text-white transition-colors mb-7 font-medium"
             >
               <ArrowLeft className="w-2.5 h-2.5" />
@@ -231,7 +231,7 @@ export default function UniBridgeCaseStudy() {
                 <span>Previous: Blinkit</span>
               </Link>
               <Link
-                to="/"
+                to="/#work"
                 className="inline-flex items-center gap-2 text-xs tracking-[0.14em] uppercase text-[#888888] hover:text-white transition-colors"
               >
                 <span>All Projects</span>

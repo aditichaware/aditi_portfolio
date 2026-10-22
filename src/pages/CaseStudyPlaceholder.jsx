@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { ArrowLeft, Clock } from 'lucide-react'
 
-export default function CaseStudyPlaceholder({ title, category, imageSrc, backLink = "/" }) {
+export default function CaseStudyPlaceholder({ title, category, imageSrc, backLink = "/#work" }) {
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -45,7 +45,7 @@ export default function CaseStudyPlaceholder({ title, category, imageSrc, backLi
               <span>Full case study coming soon</span>
             </div>
             <Link
-              to="/"
+              to="/#work"
               className="text-xs uppercase tracking-wider font-semibold text-charcoal-900 hover:underline"
             >
               Explore Other Work →

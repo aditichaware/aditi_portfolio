@@ -47,7 +47,7 @@ export default function ProjectsSection() {
   ]
 
   return (
-    <section id="work" className="bg-[#F6F5F1] text-charcoal-900 py-20 sm:py-24 md:py-28 lg:py-32">
+    <section id="work" className="bg-[#F6F5F1] text-charcoal-900 py-20 sm:py-24 md:py-28 lg:py-32 scroll-mt-6 sm:scroll-mt-8">
       <div className="max-w-[1120px] mx-auto px-5 sm:px-8 lg:px-12">
         
         {/* Section Header */}

@@ -77,7 +77,7 @@ export default function NexusCaseStudy() {
           {/* Desktop Sticky Rail (Ultra-narrow 110-120px, no borders/dividers, blends into bg) */}
           <aside className="hidden lg:block w-[115px] shrink-0 sticky top-24 self-start pt-1">
             <Link
-              to="/"
+              to="/#work"
               className="inline-flex items-center gap-1.5 text-[10px] tracking-[0.16em] uppercase text-[#6B6B6B] hover:text-white transition-colors mb-7 font-medium"
             >
               <ArrowLeft className="w-2.5 h-2.5" />
@@ -273,7 +273,7 @@ export default function NexusCaseStudy() {
             {/* Bottom Navigation */}
             <ScrollReveal className="mt-14 sm:mt-20 pt-8 pb-12 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
               <Link
-                to="/"
+                to="/#work"
                 className="inline-flex items-center gap-2 text-xs tracking-[0.14em] uppercase text-[#888888] hover:text-white transition-colors"
               >
                 <ArrowLeft className="w-3.5 h-3.5" />

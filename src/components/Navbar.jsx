@@ -1,21 +1,29 @@
 import React, { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const location = useLocation()
+  const navigate = useNavigate()
   const isHomePage = location.pathname === '/'
 
   const scrollToSection = (id) => {
     setMobileMenuOpen(false)
-    if (!isHomePage) {
-      window.location.href = `/#${id}`
-      return
-    }
-    const element = document.getElementById(id)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+    if (location.pathname === '/') {
+      setTimeout(() => {
+        const element = document.getElementById(id)
+        if (element) {
+          const yOffset = -16
+          const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset
+          window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' })
+          if (window.location.hash !== `#${id}`) {
+            window.history.pushState(null, '', `/#${id}`)
+          }
+        }
+      }, 50)
+    } else {
+      navigate(`/#${id}`)
     }
   }
 
@@ -25,6 +33,11 @@ export default function Navbar() {
         {/* Left: Logo */}
         <Link 
           to="/" 
+          onClick={() => {
+            if (isHomePage) {
+              window.scrollTo({ top: 0, behavior: 'smooth' })
+            }
+          }}
           className="flex items-center transition-opacity hover:opacity-90"
           aria-label="Aditi Portfolio Home"
         >
