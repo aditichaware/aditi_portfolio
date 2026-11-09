@@ -224,11 +224,11 @@ export default function UniBridgeCaseStudy() {
             {/* Bottom Navigation */}
             <ScrollReveal className="mt-14 sm:mt-20 pt-8 pb-12 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
               <Link
-                to="/work/blinkit"
+                to="/work/krushisetu"
                 className="inline-flex items-center gap-2 text-xs tracking-[0.14em] uppercase text-[#888888] hover:text-white transition-colors"
               >
                 <ArrowLeft className="w-3.5 h-3.5" />
-                <span>Previous: Blinkit</span>
+                <span>Previous: KrushiSetu</span>
               </Link>
               <Link
                 to="/#work"
@@ -237,10 +237,10 @@ export default function UniBridgeCaseStudy() {
                 <span>All Projects</span>
               </Link>
               <Link
-                to="/work/nexus"
+                to="/work/blinkit"
                 className="inline-flex items-center gap-2 text-xs tracking-[0.14em] uppercase text-[#CCCCCC] hover:text-white transition-colors"
               >
-                <span>Next Project: Deloitte / Nexus</span>
+                <span>Next Project: Blinkit</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </ScrollReveal>

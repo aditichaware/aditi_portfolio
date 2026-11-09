@@ -273,11 +273,17 @@ export default function NexusCaseStudy() {
             {/* Bottom Navigation */}
             <ScrollReveal className="mt-14 sm:mt-20 pt-8 pb-12 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
               <Link
-                to="/#work"
+                to="/work/blinkit"
                 className="inline-flex items-center gap-2 text-xs tracking-[0.14em] uppercase text-[#888888] hover:text-white transition-colors"
               >
                 <ArrowLeft className="w-3.5 h-3.5" />
-                <span>Back to all projects</span>
+                <span>Previous: Blinkit</span>
+              </Link>
+              <Link
+                to="/#work"
+                className="inline-flex items-center gap-2 text-xs tracking-[0.14em] uppercase text-[#888888] hover:text-white transition-colors"
+              >
+                <span>All Projects</span>
               </Link>
               <Link
                 to="/work/krushisetu"

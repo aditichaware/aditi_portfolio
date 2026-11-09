@@ -246,11 +246,11 @@ export default function BlinkitCaseStudy() {
             {/* Bottom Navigation */}
             <ScrollReveal className="mt-14 sm:mt-20 pt-8 pb-12 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
               <Link
-                to="/work/krushisetu"
+                to="/work/unibridge"
                 className="inline-flex items-center gap-2 text-xs tracking-[0.14em] uppercase text-[#888888] hover:text-white transition-colors"
               >
                 <ArrowLeft className="w-3.5 h-3.5" />
-                <span>Previous: KrushiSetu</span>
+                <span>Previous: UniBridge</span>
               </Link>
               <Link
                 to="/#work"
@@ -259,10 +259,10 @@ export default function BlinkitCaseStudy() {
                 <span>All Projects</span>
               </Link>
               <Link
-                to="/work/unibridge"
+                to="/work/nexus"
                 className="inline-flex items-center gap-2 text-xs tracking-[0.14em] uppercase text-[#CCCCCC] hover:text-white transition-colors"
               >
-                <span>Next Project: UniBridge</span>
+                <span>Next Project: Deloitte / Nexus</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </ScrollReveal>

@@ -26,18 +26,26 @@ export default function Hero() {
     <section className="w-full bg-[#1E1E1E] text-white pt-10 sm:pt-14 md:pt-16 pb-20 md:pb-28">
       <div className="max-w-[1120px] mx-auto px-4 sm:px-8 lg:px-12">
         
-        {/* Header Titles */}
+        {/* Header Block: Heading -> Handwritten Tagline -> Introductory Paragraph */}
         <div className="text-center mb-10 sm:mb-12 md:mb-14">
-          <h1 className="text-3xl sm:text-[40px] md:text-[46px] font-bold tracking-tight text-white mb-2.5">
+          {/* 1. Heading */}
+          <h1 className="text-3xl sm:text-[40px] md:text-[46px] font-bold tracking-tight text-white mb-2 sm:mb-2.5">
             Hi! I’m Aditi.
           </h1>
-          <p className="font-handwriting italic text-2xl sm:text-3xl md:text-[34px] text-[#EDEDED] font-normal">
+
+          {/* 2. Handwritten Tagline */}
+          <p className="font-handwriting italic text-2xl sm:text-3xl md:text-[32px] text-white font-normal mb-3 sm:mb-3.5 leading-snug">
             Making, noticing & creating since 2005.
+          </p>
+
+          {/* 3. Introductory Paragraph */}
+          <p className="text-[#E0E0E0] text-base sm:text-lg md:text-[19px] font-normal leading-relaxed max-w-[580px] mx-auto px-4">
+            I’m a UX designer who enjoys understanding problems,<br className="hidden sm:inline" /> exploring ideas, and making things simpler.
           </p>
         </div>
 
-        {/* 5-Column Photo Collage */}
-        <div className="flex items-center justify-center gap-2 sm:gap-2.5 md:gap-3 lg:gap-3.5 max-w-[980px] mx-auto">
+        {/* 4. 5-Column Photo Collage (Max width capped at 942px, responsive 100%, centered) */}
+        <div className="flex items-center justify-center gap-2 sm:gap-2.5 md:gap-3 lg:gap-3.5 w-full max-w-[942px] mx-auto">
           
           {/* Column 1: Far-left Wing (Teaching kids) */}
           <div className="w-[15%] sm:w-[15.5%] flex-shrink-0 self-center">
@@ -156,13 +164,6 @@ export default function Hero() {
             </div>
           </div>
 
-        </div>
-
-        {/* Bio Text Below Collage */}
-        <div className="mt-12 sm:mt-14 md:mt-16 text-center">
-          <p className="text-[#E0E0E0] text-base sm:text-lg md:text-[20px] font-normal leading-relaxed max-w-[580px] mx-auto px-4">
-            I’m a UX designer who enjoys understanding problems,<br className="hidden sm:inline" /> exploring ideas, and making things simpler.
-          </p>
         </div>
 
       </div>

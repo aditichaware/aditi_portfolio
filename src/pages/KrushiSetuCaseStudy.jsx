@@ -224,10 +224,10 @@ export default function KrushiSetuCaseStudy() {
                 <span>All Projects</span>
               </Link>
               <Link
-                to="/work/blinkit"
+                to="/work/unibridge"
                 className="inline-flex items-center gap-2 text-xs tracking-[0.14em] uppercase text-[#CCCCCC] hover:text-white transition-colors"
               >
-                <span>Next Project: Blinkit</span>
+                <span>Next Project: UniBridge</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </ScrollReveal>

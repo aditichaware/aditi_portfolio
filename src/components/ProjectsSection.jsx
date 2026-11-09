@@ -5,16 +5,6 @@ import ScrollReveal from './ScrollReveal.jsx'
 export default function ProjectsSection() {
   const projects = [
     {
-      title: 'Deloitte Summer Internship',
-      description: 'Turning a developer-dependent process into a self-serve experience.',
-      tags: ['Interaction Design', 'Enterprise UX'],
-      tagBorderColor: 'border-[#4A7C59]/60',
-      tagBgColor: 'bg-[#EDF4EE]/40',
-      imageSrc: '/images/projects/portfolio_work1.png',
-      route: '/work/nexus',
-      layoutReversed: false,
-    },
-    {
       title: 'Krushikendra Management',
       description: 'Turning a complex supply chain into one clear system.',
       tags: ['Object-Oriented UX', 'Dashboard UI'],
@@ -22,6 +12,16 @@ export default function ProjectsSection() {
       tagBgColor: 'bg-[#EFF4EC]/40',
       imageSrc: '/images/projects/portfolio_work2.png',
       route: '/work/krushisetu',
+      layoutReversed: false,
+    },
+    {
+      title: 'UniBridge',
+      description: 'Redesigning the Study Abroad Journey,\nEnd to End',
+      tags: ['Service Design', 'UX Research'],
+      tagBorderColor: 'border-[#6B9BD1]/70',
+      tagBgColor: 'bg-[#EFF5FC]/40',
+      imageSrc: '/images/projects/portfolio_work4.png',
+      route: '/work/unibridge',
       layoutReversed: true,
     },
     {
@@ -35,13 +35,13 @@ export default function ProjectsSection() {
       layoutReversed: false,
     },
     {
-      title: 'UniBridge',
-      description: 'Redesigning the Study Abroad Journey,\nEnd to End',
-      tags: ['Service Design', 'UX Research'],
-      tagBorderColor: 'border-[#6B9BD1]/70',
-      tagBgColor: 'bg-[#EFF5FC]/40',
-      imageSrc: '/images/projects/portfolio_work4.png',
-      route: '/work/unibridge',
+      title: 'Deloitte Summer Internship',
+      description: 'Turning a developer-dependent process into a self-serve experience.',
+      tags: ['Interaction Design', 'Enterprise UX'],
+      tagBorderColor: 'border-[#4A7C59]/60',
+      tagBgColor: 'bg-[#EDF4EE]/40',
+      imageSrc: '/images/projects/portfolio_work1.png',
+      route: '/work/nexus',
       layoutReversed: true,
     },
   ]
